@@ -1,0 +1,38 @@
+
+<div fxLayout="column" fxLayoutAlign="center center" >
+    <form [formGroup]="createForm"  (ngSubmit)="onSubmit()" fxLayout="column" fxLayoutAlign="center center">
+        <div class="container" fxFlex >
+            <div class="container1" (click)="isShow()" *ngIf="!show || show">
+                <div fxLayout="row " fxLayoutAlign=" start center" >
+                    <input formControlName="description" type="text" class="input" placeholder="Take a note">
+                    <img *ngIf="show" src="./../../../assets/push_pin_FILL0_wght400_GRAD0_opsz48.svg" alt=""
+                        style="padding-left: 50px; width: 20px;height: 20px;padding-top: 10px;">
+                    <div class="secondimg" *ngIf=" !show">
+                        <img src="./../../../assets/check_box_FILL0_wght400_GRAD0_opsz48.svg">
+                        <img src="../../../assets/brush_FILL0_wght400_GRAD0_opsz48.svg">
+                        <img src="../../../assets/photo_FILL0_wght400_GRAD0_opsz48.svg">
+                    </div>
+                </div>
+
+            </div>
+            <div style="height: 30px; padding: 10px 15px; font-size: medium;" *ngIf="show">
+                <input formControlName="title" type="text" class="input" placeholder="Title">
+            </div><br>
+
+
+            <div style="padding-right: 40px; font-size: medium;height: 40px; " fxLayout="row"
+                fxLayoutAlign="space-between " *ngIf="show">
+                <div style="padding-left: 18px;">
+                    <app-icons></app-icons>
+                </div>
+
+                <div>
+                    <button (click)="onSubmit()" (click)=" close()">close</button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+</div>
+

@@ -1,0 +1,17 @@
+<div >
+    <div fxLayout="row" fxLayoutAlign="space-between">
+        <textarea type="text" [(ngModel)]="title"></textarea>
+
+        <img src="./../../../assets/push_pin_FILL0_wght400_GRAD0_opsz48.svg" alt="" style=" width: 20px;height: 20px;">
+    </div>
+    <div>
+        <textarea type="text" [(ngModel)]="description"></textarea>
+
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="space-between" style="padding-left: -20px;">
+        <app-icons></app-icons>
+        <button mat-button (click)=" onNoClick()">close</button>
+    </div>
+
+</div>
